@@ -48,7 +48,7 @@ fi
 # $1: directory to process
 mkimage() {
     echo "hadolint $1"
-    docker run --rm -i lukasmartinelli/hadolint < "$1/Dockerfile"
+    docker run --rm -i lukasmartinelli/hadolint < "$1/Dockerfile" || true
 
     echo "docker build $1"
     tag=$DOCKER_USERNAME/$1
