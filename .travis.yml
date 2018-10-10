@@ -11,6 +11,18 @@ notifications:
 git:
   depth: 1
 
+env:
+  matrix:
+    - DIMAGE=gcc_5
+    - DIMAGE=gcc_6
+    - DIMAGE=gcc_7
+    - DIMAGE=gcc_8
+    - DIMAGE=clang_3.8
+    - DIMAGE=clang_4.0
+    - DIMAGE=clang_5.0
+    - DIMAGE=clang_6.0
+    - DIMAGE=clang_7
+
 cache:
   apt: true
 
@@ -22,5 +34,5 @@ matrix:
   fast_finish: true
 
 script:
-  - sudo ./build.sh --batch
+  - sudo ./build.sh --batch $DIMAGE
 
