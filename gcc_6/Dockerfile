@@ -4,6 +4,8 @@ RUN dpkg --add-architecture i386 \
     && apt-get -qq update \
     && apt-get -qq install -y --no-install-recommends \
        sudo=1.8.* \
+       curl \
+       ca-certificates \
        binutils=2.29.* \
        git=1:2.14.* \
        libc6-dev-i386=2.26-* \

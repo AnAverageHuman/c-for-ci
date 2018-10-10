@@ -10,6 +10,8 @@ RUN dpkg --add-architecture i386 \
     && apt-get -qq update \
     && apt-get -qq install -y --no-install-recommends \
        sudo=1.8.20p2-1ubuntu1 \
+       curl \
+       ca-certificates \
        git=1:2.14.1-1ubuntu4 \
        g++-multilib=4:7.2.0-1ubuntu1 \
        clang-${LLVM_VERSION}=1:4.0.1-6 \

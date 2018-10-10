@@ -4,6 +4,8 @@ RUN dpkg --add-architecture i386 \
     && apt-get -qq update \
     && apt-get install -y --no-install-recommends \
        sudo=1.8.21p2-3ubuntu1 \
+       curl \
+       ca-certificates \
        binutils=2.* \
        git \
        libc6-dev-i386=2.27-3ubuntu1 \

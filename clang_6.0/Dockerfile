@@ -10,6 +10,8 @@ RUN dpkg --add-architecture i386 \
     && apt-get -qq update \
     && apt-get install -y --no-install-recommends \
        sudo=1.8.21p2-3ubuntu1 \
+       curl \
+       ca-certificates \
        git \
        g++-multilib=4:7.3.0-3ubuntu2 \
        clang-6.0=1:6.0-1ubuntu2 \

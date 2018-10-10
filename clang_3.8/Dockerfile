@@ -12,6 +12,8 @@ RUN dpkg --add-architecture i386 \
     && apt-get -qq update \
     && apt-get -qq install -y --no-install-recommends \
        sudo=1.8.* \
+       curl \
+       ca-certificates \
        git=1:2.* \
        clang-${LLVM_VERSION}=1:3.8.1-* \
        llvm-${LLVM_VERSION}=1:3.8.1-* \
