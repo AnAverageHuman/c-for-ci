@@ -1,0 +1,26 @@
+group: travis-latest
+language: minimal
+os: linux
+
+services:
+  - docker
+
+notifications:
+  email: false
+
+git:
+  depth: 1
+
+cache:
+  apt: true
+
+branches:
+  except:
+    - travis-artifacts
+
+matrix:
+  fast_finish: true
+
+script:
+  - sudo ./build.sh --batch
+
